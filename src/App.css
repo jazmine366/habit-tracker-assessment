@@ -1,0 +1,532 @@
+:root {
+  --theme-color: #4f6f3a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(
+      circle at top left,
+      color-mix(in srgb, var(--theme-color) 38%, white),
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at top right,
+      color-mix(in srgb, var(--theme-color) 30%, white),
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--theme-color) 18%, white),
+      #f7f4ed 48%,
+      color-mix(in srgb, var(--theme-color) 22%, white)
+    );
+  color: #172015;
+  font-family: Arial, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 35%, white);
+  outline-offset: 3px;
+}
+
+.app {
+  --accent: #4f6f3a;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: 24px;
+  align-items: end;
+  margin-bottom: 24px;
+}
+
+.eyebrow,
+.week-label {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 720px;
+  margin: 0;
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 0.95;
+  letter-spacing: -3px;
+}
+
+.intro {
+  max-width: 620px;
+  margin: 18px 0 0;
+  color: #5f675b;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.add-form,
+.card {
+  border: 1px solid #ded8ca;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 20px 50px rgba(30, 40, 20, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.add-form {
+  padding: 22px;
+}
+
+.add-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.add-row {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #cfc8b9;
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+button {
+  border: none;
+  border-radius: 14px;
+  background: #172015;
+  color: white;
+  padding: 12px 16px;
+  font-weight: bold;
+}
+
+.suggestions {
+  margin-top: 16px;
+}
+
+.suggestions p {
+  margin: 0 0 8px;
+  color: #5f675b;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.suggestion-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.suggestion-chip {
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, white);
+  background: color-mix(in srgb, var(--accent) 12%, white);
+  color: #172015;
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.suggestion-chip:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--accent) 18%, white);
+}
+
+.card {
+  padding: 24px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.toolbar h2 {
+  margin: 0;
+  font-size: clamp(24px, 3vw, 36px);
+  letter-spacing: -1px;
+}
+
+.week-controls {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.color-control {
+  display: grid;
+  gap: 6px;
+  color: #5f675b;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.color-control input {
+  width: 48px;
+  height: 44px;
+  padding: 4px;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.jump-control span {
+  display: none;
+}
+
+.jump-control input {
+  width: 170px;
+  padding: 12px 14px;
+  background: #fff;
+}
+
+.week-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.week-buttons button {
+  background: #ece7dc;
+  color: #172015;
+}
+
+.empty-state {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.empty-icon {
+  display: grid;
+  width: 68px;
+  height: 68px;
+  place-items: center;
+  border-radius: 22px;
+  background: color-mix(in srgb, var(--accent) 16%, white);
+  color: var(--accent);
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.empty-state h2 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.empty-state p {
+  max-width: 420px;
+  margin: 0;
+  color: #5f675b;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.grid-wrapper {
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.habit-grid {
+  min-width: 920px;
+}
+
+.habit-grid,
+.habit-row {
+  display: grid;
+  grid-template-columns: 240px 140px repeat(7, 76px);
+}
+
+.habit-row {
+  display: contents;
+}
+
+.grid-header {
+  min-height: 68px;
+  padding: 14px 10px;
+  border-bottom: 2px solid #e8e1d4;
+  color: #5f675b;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.habit-column {
+  text-align: left;
+}
+
+.day-column {
+  display: grid;
+  place-items: center;
+  gap: 4px;
+  border-radius: 18px 18px 0 0;
+}
+
+.day-column strong {
+  color: #172015;
+  font-size: 18px;
+}
+
+.today-header {
+  background: color-mix(in srgb, var(--accent) 18%, white);
+  color: #172015;
+}
+
+.habit-name,
+.week-progress,
+.check-cell {
+  min-height: 82px;
+  border-bottom: 1px solid #eee7d9;
+}
+
+.habit-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  padding-right: 12px;
+}
+
+.habit-title {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.habit-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.small-button {
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.secondary-button {
+  background: #ece7dc;
+  color: #172015;
+}
+
+.delete-button {
+  background: #f3d6d0;
+  color: #8a281b;
+}
+
+.rename-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.rename-form input {
+  min-width: 150px;
+  padding: 8px 10px;
+}
+
+.week-progress {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  color: #5f675b;
+}
+
+.week-badge {
+  display: grid;
+  justify-items: center;
+  gap: 3px;
+}
+
+.week-badge span {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.week-badge em {
+  color: #6a7164;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.streak-line {
+  color: #6a7164;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.check-cell {
+  display: grid;
+  place-items: center;
+  border-left: none;
+  border-right: 1px solid #f0eadf;
+  border-top: none;
+  border-radius: 0;
+  background: white;
+  color: var(--accent);
+  box-shadow: none;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.check-cell:hover:not(:disabled) {
+  background: #f8f6ef;
+}
+
+.check-cell::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 2px solid #d5cdbc;
+  border-radius: 8px;
+}
+
+.check-cell.checked {
+  background: color-mix(in srgb, var(--accent) 17%, white);
+}
+
+.check-cell.checked::before {
+  display: none;
+}
+
+.today-cell {
+  background: color-mix(in srgb, var(--accent) 8%, white);
+}
+
+.today-cell.checked {
+  background: color-mix(in srgb, var(--accent) 24%, white);
+}
+
+.just-toggled {
+  animation: pop 450ms ease;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.94);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 760px) {
+  .app {
+    padding: 24px 12px;
+  }
+
+  .header {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    letter-spacing: -2px;
+  }
+
+  .add-row {
+    flex-direction: column;
+  }
+
+  .toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .week-controls {
+    width: 100%;
+    align-items: stretch;
+    justify-content: stretch;
+    gap: 16px;
+  }
+
+  .color-control {
+    width: 100%;
+  }
+
+  .color-control input {
+    width: 100%;
+  }
+
+  .jump-control {
+    width: 100%;
+  }
+
+  .jump-control input {
+    width: 100%;
+  }
+
+  .week-buttons {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .week-buttons button {
+    flex: 1;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .card {
+    padding: 16px;
+    border-radius: 22px;
+  }
+
+  .habit-grid {
+    min-width: 840px;
+  }
+
+  .habit-grid,
+  .habit-row {
+    grid-template-columns: 180px 120px repeat(7, 66px);
+  }
+
+  .grid-header,
+  .habit-name,
+  .week-progress,
+  .check-cell {
+    min-height: 76px;
+  }
+}
