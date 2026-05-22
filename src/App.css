@@ -529,12 +529,21 @@ button {
     display: grid;
     grid-template-columns: 72px 1fr;
     gap: 14px;
-    align-items: end;
+    align-items: start;
+  }
+
+  .color-control,
+  .jump-control {
+    display: grid;
+    gap: 8px;
+    color: #5f675b;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
   }
 
   .color-control {
     width: 72px;
-    text-align: left;
   }
 
   .color-control input {
@@ -545,11 +554,6 @@ button {
 
   .jump-control {
     width: 100%;
-    display: grid;
-    gap: 6px;
-    color: #5f675b;
-    font-size: 12px;
-    font-weight: bold;
   }
 
   .jump-control span {
@@ -558,7 +562,8 @@ button {
 
   .jump-control input {
     width: 100%;
-    padding: 12px 14px;
+    height: 46px;
+    padding: 10px 14px;
     color: #172015;
     text-align: center;
   }
@@ -578,50 +583,57 @@ button {
   }
 
   .grid-wrapper {
-    margin-top: 8px;
-    overflow-x: auto;
+    margin-top: 10px;
+    overflow-x: visible;
   }
 
   .habit-grid {
-    min-width: 650px;
-  }
-
-  .habit-grid,
-  .habit-row {
-    grid-template-columns: 140px 94px repeat(7, 58px);
+    min-width: 0;
+    display: grid;
+    gap: 14px;
   }
 
   .grid-header {
-    min-height: 58px;
-    padding: 10px 6px;
-    font-size: 13px;
+    display: none;
   }
 
-  .day-column strong {
-    font-size: 16px;
+  .habit-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 14px 10px;
+    padding: 16px;
+    border: 1px solid #eee7d9;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.72);
   }
 
-  .habit-name,
-  .week-progress,
-  .check-cell {
-    min-height: 76px;
+  .habit-name {
+    min-height: 0;
+    border-bottom: none;
+    padding-right: 0;
   }
 
   .habit-title {
-    font-size: 15px;
+    font-size: 19px;
   }
 
   .habit-actions {
-    gap: 6px;
+    gap: 8px;
   }
 
   .small-button {
-    padding: 6px 9px;
-    font-size: 11px;
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+
+  .week-progress {
+    min-height: 0;
+    border-bottom: none;
+    align-self: center;
   }
 
   .week-badge span {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .week-badge em,
@@ -630,12 +642,33 @@ button {
   }
 
   .check-cell {
+    min-height: 62px;
+    border: 1px solid #eee7d9;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
     font-size: 20px;
+    padding: 7px 4px;
   }
 
   .check-cell::before {
-    width: 26px;
-    height: 26px;
+    width: 23px;
+    height: 23px;
+    border-radius: 7px;
+  }
+
+  .check-cell::after {
+    content: attr(data-day);
+    color: #5f675b;
+    font-size: 11px;
+    font-weight: bold;
+  }
+
+  .check-cell.checked::after {
+    color: #172015;
   }
 
   .empty-state {
