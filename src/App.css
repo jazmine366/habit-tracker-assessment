@@ -460,73 +460,194 @@ button {
 
   .header {
     grid-template-columns: 1fr;
+    gap: 22px;
+    margin-bottom: 22px;
+  }
+
+  .eyebrow,
+  .week-label {
+    font-size: 12px;
+    letter-spacing: 0.12em;
   }
 
   h1 {
+    font-size: 52px;
+    line-height: 0.95;
     letter-spacing: -2px;
+  }
+
+  .intro {
+    margin-top: 14px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .add-form,
+  .card {
+    border-radius: 26px;
+  }
+
+  .add-form {
+    padding: 22px;
   }
 
   .add-row {
     flex-direction: column;
   }
 
+  .add-row button {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .suggestion-list {
+    gap: 10px;
+  }
+
+  .suggestion-chip {
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+
+  .card {
+    padding: 20px 16px;
+  }
+
   .toolbar {
     align-items: flex-start;
     flex-direction: column;
+    gap: 18px;
+  }
+
+  .toolbar h2 {
+    font-size: 34px;
+    line-height: 1.05;
   }
 
   .week-controls {
     width: 100%;
-    align-items: stretch;
-    justify-content: stretch;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 14px;
+    align-items: end;
   }
 
   .color-control {
-    width: 100%;
+    width: 72px;
+    text-align: left;
   }
 
   .color-control input {
-    width: 100%;
+    width: 58px;
+    height: 46px;
+    padding: 4px;
   }
 
   .jump-control {
     width: 100%;
+    display: grid;
+    gap: 6px;
+    color: #5f675b;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .jump-control span {
+    display: block;
   }
 
   .jump-control input {
     width: 100%;
+    padding: 12px 14px;
+    color: #172015;
+    text-align: center;
   }
 
   .week-buttons {
+    grid-column: 1 / -1;
     width: 100%;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
   }
 
   .week-buttons button {
-    flex: 1;
-    padding-left: 8px;
-    padding-right: 8px;
+    width: 100%;
+    padding: 14px 8px;
+    font-size: 16px;
   }
 
-  .card {
-    padding: 16px;
-    border-radius: 22px;
+  .grid-wrapper {
+    margin-top: 8px;
+    overflow-x: auto;
   }
 
   .habit-grid {
-    min-width: 840px;
+    min-width: 650px;
   }
 
   .habit-grid,
   .habit-row {
-    grid-template-columns: 180px 120px repeat(7, 66px);
+    grid-template-columns: 140px 94px repeat(7, 58px);
   }
 
-  .grid-header,
+  .grid-header {
+    min-height: 58px;
+    padding: 10px 6px;
+    font-size: 13px;
+  }
+
+  .day-column strong {
+    font-size: 16px;
+  }
+
   .habit-name,
   .week-progress,
   .check-cell {
     min-height: 76px;
+  }
+
+  .habit-title {
+    font-size: 15px;
+  }
+
+  .habit-actions {
+    gap: 6px;
+  }
+
+  .small-button {
+    padding: 6px 9px;
+    font-size: 11px;
+  }
+
+  .week-badge span {
+    font-size: 24px;
+  }
+
+  .week-badge em,
+  .streak-line {
+    font-size: 9px;
+  }
+
+  .check-cell {
+    font-size: 20px;
+  }
+
+  .check-cell::before {
+    width: 26px;
+    height: 26px;
+  }
+
+  .empty-state {
+    padding: 48px 18px;
+  }
+
+  .empty-state h2 {
+    font-size: 36px;
+  }
+
+  .empty-state p {
+    font-size: 18px;
+    line-height: 1.45;
   }
 }
