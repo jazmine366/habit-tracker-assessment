@@ -4,6 +4,18 @@ A single page weekly habit tracker built with Vite and React, usable on both com
 
 Live app: https://habit-tracker-assessment.vercel.app/
 
+## Preview
+
+### Desktop
+
+![Desktop preview](screenshots/ss_cs.png)
+
+### Mobile
+
+![Mobile preview 1](screenshots/ss_phone1.jpg)
+
+![Mobile preview 2](screenshots/ss_phone2.jpg)
+
 ## Features
 
 - Add, rename, and delete habits
@@ -14,6 +26,7 @@ Live app: https://habit-tracker-assessment.vercel.app/
 - Show weekly growth stages and streaks
 - Choose a theme color
 - Save habits and checkmarks after page reloads
+- Mobile layout with individual habit cards
 
 ## How to run locally
 
