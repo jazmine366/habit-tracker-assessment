@@ -455,7 +455,10 @@ button {
 
 @media (max-width: 760px) {
   .app {
+    width: 100%;
+    max-width: 100%;
     padding: 24px 12px;
+    overflow-x: hidden;
   }
 
   .header {
@@ -484,6 +487,7 @@ button {
 
   .add-form,
   .card {
+    width: 100%;
     border-radius: 26px;
   }
 
@@ -583,13 +587,16 @@ button {
   }
 
   .grid-wrapper {
+    width: 100%;
     margin-top: 10px;
     overflow-x: visible;
   }
 
   .habit-grid {
+    width: 100%;
     min-width: 0;
     display: grid;
+    grid-template-columns: 1fr;
     gap: 14px;
   }
 
@@ -598,6 +605,7 @@ button {
   }
 
   .habit-row {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
     gap: 12px 8px;
@@ -644,15 +652,17 @@ button {
   }
 
   .check-cell {
-    min-height: 76px;
+    width: 100%;
+    min-width: 0;
+    min-height: 72px;
     border: 1px solid #eee7d9;
     border-radius: 16px;
     display: grid;
     grid-template-rows: auto 1fr auto;
     place-items: center;
     gap: 4px;
-    font-size: 20px;
-    padding: 8px 4px;
+    font-size: 18px;
+    padding: 7px 3px;
   }
 
   .check-cell::before {
@@ -663,14 +673,14 @@ button {
     border: none;
     border-radius: 0;
     color: #5f675b;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: bold;
   }
 
   .check-cell::after {
     content: attr(data-date);
     color: #5f675b;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: bold;
   }
 
