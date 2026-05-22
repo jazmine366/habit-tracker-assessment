@@ -8,13 +8,13 @@ Live app: https://habit-tracker-assessment.vercel.app/
 
 ### Desktop
 
-![Desktop preview](screenshots/ss_cs.png)
+<img src="screenshots/ss_cs.png" alt="Desktop preview" width="700" />
 
 ### Mobile
 
-![Mobile preview 1](screenshots/ss_phone1.jpg)
+<img src="screenshots/ss_phone1.jpg" alt="Mobile preview 1" width="260" />
 
-![Mobile preview 2](screenshots/ss_phone2.jpg)
+<img src="screenshots/ss_phone2.jpg" alt="Mobile preview 2" width="260" />
 
 ## Features
 
