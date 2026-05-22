@@ -12,9 +12,10 @@ Live app: https://habit-tracker-assessment.vercel.app/
 
 ### Mobile
 
-<img src="screenshots/ss_phone1.jpg" alt="Mobile preview 1" width="260" />
-
-<img src="screenshots/ss_phone2.jpg" alt="Mobile preview 2" width="260" />
+<p>
+  <img src="screenshots/ss_phone1.jpg" alt="Mobile preview 1" width="220" />
+  <img src="screenshots/ss_phone2.jpg" alt="Mobile preview 2" width="220" />
+</p>
 
 ## Features
 

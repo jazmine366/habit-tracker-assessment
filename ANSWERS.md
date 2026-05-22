@@ -60,6 +60,7 @@ I used it to:
 - Debug the localStorage issue when habits disappeared after refreshing the page.
 - Improve the UI with quick add chips, theme color, a jump to week date picker, and stage emojis.
 - Fix the mobile layout after the first phone version was too cramped.
+- Revised README.md
 
 One specific thing I changed from the AI output was the progress design. The first version focused on a plain streak number. I changed it to a Growth column with emoji stages because I wanted the app to feel more encouraging, like a small reward system. Even if the user misses one day, they can still see weekly growth from the days they completed.
 
