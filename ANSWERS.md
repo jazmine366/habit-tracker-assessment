@@ -68,6 +68,8 @@ Another specific change was the mobile layout. The first responsive version used
 
 ## 5. Honest gap
 
-With another day, I would add a monthly progress chart. For example, if the user completed 9 habit check ins out of 30 possible days, the app could show a small circle or progress ring with “30%”. That allows user to compare progress each month, see in a larger scope instead of just how they check off in a weekly scale. 
+With another day, I would add a monthly progress chart. For example, if the user completed 9 habit check-ins out of 30 possible days, the app could show a small circle or progress ring with “30%”. This would help users view their progress on a larger monthly scale instead of only weekly checkmarks.
 
-The delete action is also not fully polished. Right now, deleting a habit happens immediately. With more time, I would add an undo or confirm option after deletion in case of accidental clicks.
+I would also want to add accounts so users could sync progress across different devices and keep their habit data safer long term.
+
+The delete action is also not fully polished. Right now, deleting a habit happens immediately. With more time, I would add an undo or confirmation option to prevent accidental deletion.
