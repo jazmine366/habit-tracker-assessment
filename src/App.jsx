@@ -91,6 +91,16 @@ function getWeekBadge(weekCount) {
   return WEEK_STAGES[weekCount];
 }
 
+function getMobileDayLabel(dayName) {
+  if (dayName === "Mon") return "M";
+  if (dayName === "Tue") return "T";
+  if (dayName === "Wed") return "W";
+  if (dayName === "Thu") return "Th";
+  if (dayName === "Fri") return "F";
+  if (dayName === "Sat") return "Sa";
+  return "Su";
+}
+
 function App() {
   const today = useMemo(() => {
     const date = new Date();
@@ -144,6 +154,7 @@ function App() {
 
     return {
       name: dayName,
+      mobileName: getMobileDayLabel(dayName),
       date,
       dateKey,
       dayNumber: date.getDate(),
@@ -508,6 +519,8 @@ function App() {
                           ].join(" ")}
                           key={day.dateKey}
                           type="button"
+                          data-day={day.mobileName}
+                          data-date={day.dayNumber}
                           onClick={() =>
                             toggleCheck(habit.id, day.dateKey, day.isFuture)
                           }

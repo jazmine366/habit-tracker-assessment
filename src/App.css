@@ -565,11 +565,12 @@ button {
   }
 
   .jump-control input {
-    width: 100%;
-    height: 46px;
-    padding: 10px 14px;
+    width: 96%;
+    height: 44px;
+    padding: 8px 12px;
     color: #172015;
     text-align: center;
+    justify-self: end;
   }
 
   .week-buttons {
@@ -658,7 +659,7 @@ button {
     border: 1px solid #eee7d9;
     border-radius: 16px;
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 1fr auto;
     place-items: center;
     gap: 4px;
     font-size: 18px;
@@ -666,26 +667,22 @@ button {
   }
 
   .check-cell::before {
-    content: attr(data-day);
-    display: block;
-    width: auto;
-    height: auto;
-    border: none;
-    border-radius: 0;
-    color: #5f675b;
-    font-size: 10px;
-    font-weight: bold;
+    content: "";
+    width: 23px;
+    height: 23px;
+    border: 2px solid #d5cdbc;
+    border-radius: 7px;
   }
 
   .check-cell::after {
-    content: attr(data-date);
+    content: attr(data-day);
     color: #5f675b;
     font-size: 11px;
     font-weight: bold;
   }
 
   .check-cell.checked::before {
-    display: block;
+    display: none;
   }
 
   .check-cell.checked::after {
